@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartOffice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header, .hero, .features, .gallery, .icons, .footer {
+      padding: 40px;
+      text-align: center;
+    }
+    .header {
+      background-color: #d2b48c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+    .hero {
+      background-color: #f5deb3;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .features {
+      background-color: #e0c090;
+    }
+    .gallery {
+      background-color: #deb887;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .gallery-item {
+      width: 30%;
+      background-color: #fff;
+      padding: 20px;
+      margin: 10px;
+    }
+    .icons {
+      background-color: #f5deb3;
+      display: flex;
+      justify-content: space-around;
+    }
+    .icons div {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+    .footer {
+      background-color: #d2b48c;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .footer div {
+      margin: 10px;
+    }
+
+    .feature-item {
+      width: 150px;
+      text-align: center;
+      padding: 15px;
+      background-color: #f5f5f5;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    }
+    .feature-item .icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    .feature-item .text {
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    
+    .gallery {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .gallery-item {
+      text-align: center;
+      width: 200px;
+    }
+    .gallery-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #ccc; 
+    }
+
+    
+    .register-form {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 400px;
+      margin: 20px auto;
+      text-align: left;
+    }
+    .register-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .register-form button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .register-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header, .hero, .about, .features, .gallery, .footer {
+      padding: 40px;
+      text-align: center;
+    }
+    .header {
+      background-color: #d2b48c;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+    .hero {
+      background-color: #f5deb3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .about {
+      background-color: #fff3e0;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .about h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .about p {
+      font-size: 16px;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      color: #444;
+    }
+    .register-form {
+      display: none;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 400px;
+      margin: 20px auto;
+      text-align: left;
+    }
+    .register-form input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .register-form button {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .register-form button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <div class="header">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div class="logo" style="overflow: hidden; border-radius: 50%; width: 50px; height: 50px;">
+        <img src="C:\Users\WSK\Downloads\88a0098a-d998-42e9-a580-96799d3a04d9.jpg" alt="SmartOffice" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+      <div class="company-name" style="font-size: 24px; font-weight: bold;">
+        SmartOffice
+      </div>
+    </div>
+
+    <div class="phone" style="font-size: 18px; font-weight: 500;">
+      8-800-000-000
+    </div>
+
+    <div class="register">
+      <a href="#" onclick="toggleRegisterForm()" class="register-button" style="padding: 8px 16px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-weight: 600;">
+        Зарегистрироваться
+      </a>
+    </div>
+  </div>
+
+  
+  <div class="hero">
+    <img src="https://ipg-estate.ru/uploads/images/-stati-sajt-ipg-7_1.png" alt="SmartOffice" style="width: 400px; height: auto; border-radius: 8px; object-fit: cover;">
+    <p style="font-size: 22px; font-weight: bold; max-width: 400px;">
+      Современный офис для продуктивной работы и успешного бизнеса
+    </p>
+  </div>
+
+  
+  <div class="about">
+    <h2>О компании</h2>
+    <p>
+      <b>SmartOffice</b> — это коворкинг нового поколения в центре города.  
+      Мы предлагаем арендаторам современные рабочие места, удобные переговорные, зоны отдыха и быстрый интернет.  
+      Наша миссия — создать комфортную и технологичную среду для роста бизнеса.  
+      В SmartOffice каждая команда найдёт всё необходимое для эффективной работы и развития.
+    </p>
+  </div>
+
+  
+  <div id="registerForm" class="register-form">
+    <h3>Регистрация</h3>
+    <input type="text" id="name" placeholder="Имя" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Пароль" required>
+    <button type="submit" onclick="submitForm()">Отправить</button>
+  </div>
+
+  <script>
+    function toggleRegisterForm() {
+      const form = document.getElementById('registerForm');
+      form.style.display = form.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function submitForm() {
+      const name = document.getElementById('name').value;
+      if (name) {
+        alert("Спасибо за регистрацию, " + name + "!");
+      } else {
+        alert("Спасибо за регистрацию!");
+      }
+      document.getElementById('registerForm').style.display = 'none';
+    }
+  </script>
+
+</body>
+
+  
+  <div class="features">
+    <h2 style="text-align: center; font-size: 28px; margin-bottom: 30px;">Преимущества офиса</h2>
+    <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+      <div class="feature-item">
+        <div class="icon">📍</div>
+        <div class="text">Удобное расположение</div>
+      </div>
+      <div class="feature-item">
+        <div class="icon">💻</div>
+        <div class="text">Современное оборудование</div>
+      </div>
+      <div class="feature-item">
+        <div class="icon">☕</div>
+        <div class="text">Зона отдыха и кухня</div>
+      </div>
+      <div class="feature-item">
+        <div class="icon">⚡</div>
+        <div class="text">Быстрый интернет</div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="https://img.freepik.com/free-photo/portrait-handsome-young-man-closeup_176420-15568.jpg" alt="Фото 1">
+      <p>Артём Волков<br>Должность: Директор компании</p>
+    </div>
+    <div class="gallery-item">
+      <img src="https://img.freepik.com/premium-photo/portrait-charming-cheerful-guy-enjoying-free-time-staring-isolated-grey-color-wall_274222-19705.jpg" alt="Фото 2">
+      <p>Даниил Пархоменко<br>Должность: Маркетолог / Креативный менеджер</p>
+    </div>
+    <div class="gallery-item">
+      <img src="https://img.freepik.com/premium-photo/happy-concentrated-young-man-looking-camera_488220-58947.jpg" alt="Фото 3">
+      <p>Илья Садовников<br>Должность: IT-специалист / Техподдержка</p>
+    </div>
+  </div>
+
+  
+  <div class="footer" style="
+    background-color: #fadab0; 
+    padding: 30px 20px; 
+    font-family: Arial, sans-serif; 
+    color: #333;
+    display: flex; 
+    justify-content: center;">
+    <div style="max-width: 600px; width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+      <div style="width: 250px; margin-bottom: 20px;">
+        <h3 style="margin: 0 0 10px;">Контакты</h3>
+        <p style="margin: 5px 0;">📍 г. Москва, ул. Примерная, д. 10</p>
+        <p style="margin: 5px 0;">📞 +7 (705) 123-45-67</p>
+        <p style="margin: 5px 0;">🌐 <a href="https://yourwebsite.ru" target="_blank" style="color: #007bff; text-decoration: none;">yourwebsite.ru</a></p>
+      </div>
+      <div style="width: 250px; margin-bottom: 20px;">
+        <h3 style="margin: 0 0 10px;">Мы в соцсетях</h3>
+        <div style="display: flex; gap: 15px; align-items: center;">
+          <a href="https://instagram.com/yourprofile" target="_blank" style="text-decoration: none; color: #E1306C;">📷 Instagram</a>
+          <a href="https://vk.com/yourprofile" target="_blank" style="text-decoration: none; color: #4C75A3;">👥 ВКонтакте</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
